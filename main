@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مازن أحمد - مبرمج فري لانسر</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --main-color: #007bff;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* قسم الترحيب */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(45deg, #121212, #1a1a2e);
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid var(--main-color);
+            margin-bottom: 20px;
+            object-fit: cover;
+            /* أنيميشن بسيط للصورة */
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(0, 123, 255, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+        }
+
+        .hero h1 { font-size: 3rem; margin: 10px 0; }
+        .hero p { font-size: 1.2rem; color: #ccc; }
+
+        /* الأقسام العامة */
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-right: 5px solid var(--main-color);
+        }
+
+        h2 { color: var(--main-color); text-align: center; margin-bottom: 40px; }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <img src="m.jpg" alt="مازن أحمد" class="profile-img" data-aos="zoom-in">
+        <h1 data-aos="fade-up" data-aos-delay="200">مازن أحمد محمد</h1>
+        <p data-aos="fade-up" data-aos-delay="400">مبرمج فري لانسر | طالب شغوف بالتكنولوجيا</p>
+    </div>
+
+    <section>
+        <h2 data-aos="fade-right">من أنا؟</h2>
+        <div class="info-grid">
+            <div class="card" data-aos="flip-left">
+                <h3>العمر والمنشأ</h3>
+                <p>عمري 18 سنة، من محافظة الشرقية.</p>
+            </div>
+            <div class="card" data-aos="flip-left" data-aos-delay="200">
+                <h3>الدراسة</h3>
+                <p>طالب في بداية طريقي الأكاديمي والعملي.</p>
+            </div>
+            <div class="card" data-aos="flip-left" data-aos-delay="400">
+                <h3>الخبرة</h3>
+                <p>أعمل كمبرمج فري لانسر منذ سنتين، وما زلت أتعلم وأطور من مهاراتي كل يوم كـ (مبتدأ طموح).</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="card" data-aos="zoom-in-up" style="text-align: center;">
+            <h2>دعنا نعمل معاً</h2>
+            <p>إذا كنت تبحث عن مبرمج مجتهد لتنفيذ مشروعك القادم، أنا هنا للمساعدة!</p>
+            <p><strong>الموقع:</strong> الشرقية، مصر</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة لـ مازن أحمد &copy; 2025</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // سرعة الأنميشن (ملي ثانية)
+            once: false,    // هل يتكرر الأنميشن عند الصعود والنزول؟
+        });
+    </script>
+</body>
+</html>
